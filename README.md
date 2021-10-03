@@ -13,9 +13,21 @@ For the extraction of relevant recipe information (recipe name, ingredients, des
 ![ARP NER Labeling & Training](./docs/ARP_NER_Labeling.drawio.png "ARP in production vs. training")
 
 
+### Setup
+
+``` 
+python -m venv venv/
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Development
+
+Start the FastAPI web server in development mode: `uvicorn main:app`
 
 ### Request
 
+```json
 [
   {
     "id": "image1.png",
@@ -24,3 +36,4 @@ For the extraction of relevant recipe information (recipe name, ingredients, des
   },
   ...
 ]
+```
