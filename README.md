@@ -47,3 +47,10 @@ POST requests for uploading files can be done via the following:
 #### Browser
 
 Upload files via the UI at `http://localhost:8080/upload`.
+
+### Docker
+
+```bash
+docker build -t arp-demo . 
+docker run --rm -v $PWD/data:/data -p <localport>:80 arp-demo
+````
