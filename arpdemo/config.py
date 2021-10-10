@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from pydantic import BaseSettings
@@ -8,7 +9,4 @@ class Settings(BaseSettings):
     data_folder: Path = Path("/data/")
 
     class Config:
-        env_file = ".env"
-
-
-settings = Settings()
+        env_file = os.environ.get("FAST_API_DOTENV", ".env")
